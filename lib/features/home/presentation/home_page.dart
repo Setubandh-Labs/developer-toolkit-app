@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/widgets/tool_card.dart';
-import 'tool_data.dart';
+import '../../../core/widgets/tool_card.dart';
+import '../../../core/utils/app_routes.dart';
+
+import '../tool_data.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,7 +25,12 @@ class HomePage extends StatelessWidget {
             child: ToolCard(
               title: tool.title,
               description: tool.description,
-              onTap: () {},
+              onTap: () {
+                AppRoutes.push(
+                  context,
+                  tool.page,
+                );
+              },
             ),
           );
         },
