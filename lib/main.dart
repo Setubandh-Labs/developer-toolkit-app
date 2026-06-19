@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'features/home/presentation/home_page.dart';
+
 void main() {
   runApp(
     const ProviderScope(
@@ -21,11 +23,7 @@ class DeveloperToolkitApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.blue,
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Developer Toolkit'),
-        ),
-      ),
+      home: const HomePage(),
     );
   }
 }
